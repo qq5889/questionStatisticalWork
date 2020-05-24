@@ -1,0 +1,19 @@
+{
+  "name": "electionPkg",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "jackie",
+  "license": "MIT",
+  "scripts": {
+    "estart": "electron .",
+    "package": "electron-packager ./ package -win=x64 --out=build --arch=x64 --overwrite --download.mirrorOptions.mirror=https://npm.taobao.org/mirrors/electron/ --download.mirrorOptions.customDir=9.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\"",
+    "package-mac": "electron-packager ./ package --platform=darwin --out=build --arch=x64 --asar --overwrite --download.mirrorOptions.mirror=https://npm.taobao.org/mirrors/electron/ --download.mirrorOptions.customDir=9.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\""
+  },
+  "dependencies": {
+    "electron": "^9.0.0",
+    "electron-package": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
